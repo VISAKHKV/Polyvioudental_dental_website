@@ -54,7 +54,7 @@ a.button {
     font-size: 14px;
     text-transform: uppercase;
     text-align: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -476,6 +476,148 @@ header div.menu ul.bottom li a {
 #contact div.map {
     width: 40%;
 }
+/* **********************  contact ********************************* */
+
+#reviews {
+    background-image: url("../assets/images/reviews.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #fff;
+    position: relative;
+}
+#reviews::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    background: rgba(0, 0, 0, 0.4);
+}
+#reviews h3 {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+#reviews p {
+    font-size: 28px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+#reviews div.slider h4 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #505050;
+}
+#reviews div.slider p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #505050;
+}
+#reviews div.slider span {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #505050;
+}
+#reviews div.slider div.image {
+    width: 70px;
+    margin-bottom: 10px;
+}
+#reviews div.slider {
+    background-color: #f6f7f1;
+    border: solid 1px #f6f7f1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* **********************  reviews ********************************* */
+
+footer {
+    background-color: #135caaff;
+    padding: 40px 0;
+}
+footer .upper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+footer .upper ul.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .upper ul.links li {
+    margin-bottom: 15px;
+}
+footer .upper ul.links li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+footer .upper ul.links li a:hover {
+    color: #cba951;
+}
+footer .upper div.logo {
+    width: 150px;
+}
+footer .upper div.logo a {
+    display: inline-block;
+}
+footer .upper div.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .upper div.details span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+footer .upper div.details ul.media {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 10px;
+}
+footer .upper div.details ul li a span:hover {
+    color: #cba951;
+}
+footer hr {
+    height: 1px;
+    background: #cba951;
+}
+footer ul.lower {
+    margin-top: 30px;
+}
+footer ul.lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul.lower li a {
+    display: inline-block;
+    color: #fff;
+}
+footer ul.lower li a:hover {
+    color: #cba951;
+}
+/* **********************  footer ********************************* */
 
 /* **********************************************************************************/
 /* media query */
@@ -597,6 +739,18 @@ header div.menu ul.bottom li a {
     }
     #services div.serviceContainerItem {
         padding: 65px 40px;
+    }
+    footer .upper {
+        flex-direction: column;
+    }
+    footer ul.lower {
+        flex-direction: column;
+    }
+    footer ul.lower li {
+        margin-bottom: 10px;
+    }
+    footer ul.lower li:last-child {
+        margin-bottom: 0;
     }
 }
 /* **********************  768px ********************************* */
@@ -746,3 +900,18 @@ header div.menu ul.bottom li a {
 @media all and (max-width: 320px) {
 }
 /* **********************  320px ********************************* */
+
+/* *************************************************************** */
+
+.owl-nav {
+    margin: 0 auto;
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: #cba951;
+    font-size: 24px;
+}
+.owl-dots {
+    display: none;
+}
+/* **********************  carousal ********************************* */
