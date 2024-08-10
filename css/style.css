@@ -78,15 +78,13 @@ header {
     align-items: center;
     background: #fff;
     padding: 15px 0;
+    position: relative;
 }
 header h1 {
     width: 180px;
 }
 header h1 a {
     display: block;
-}
-header .ham {
-    display: none;
 }
 header div.menu {
 }
@@ -124,6 +122,67 @@ header div.menu ul.bottom li a {
     text-transform: uppercase;
     color: #135caa;
 }
+header .ham {
+    display: none;
+    font-size: 30px;
+    color: #135caa;
+    position: absolute;
+    right: 15px;
+    z-index: 3;
+    top: 15px;
+    cursor: pointer;
+}
+header div.sliderMenu {
+    display: none;
+    padding: 60px 15px 20px;
+    width: 280px;
+    background: #fff;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: 1px 1px 6px #151515;
+}
+header div.sliderMenu ul li {
+    height: 40px;
+    border-bottom: solid 1px #135caa29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div.sliderMenu ul li a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #135caa;
+    font-weight: 500;
+}
+header div.sliderMenu div.iconContainer {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header div.sliderMenu div.iconContainer span.round {
+    color: #135caa;
+    font-size: 22px;
+    border: 2px solid #135caaff;
+    border-radius: 50%;
+    padding: 8px;
+}
+header div.sliderMenu .menuOption {
+    display: block;
+    margin-top: 15px;
+}
+header div.sliderMenu .menuOption a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #135caa;
+    border: solid 2px #135caa;
+    border-radius: 2rem;
+    font-weight: 600;
+}
 
 /* **********************  header ********************************* */
 
@@ -146,6 +205,13 @@ header div.menu ul.bottom li a {
     height: 100%;
     box-sizing: content-box;
     background: rgba(0, 0, 0, 0.4);
+}
+#spotlight #wrapper {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #spotlight h2 {
@@ -174,13 +240,17 @@ header div.menu ul.bottom li a {
 /* **********************  spotlight ********************************* */
 
 #about {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     padding: 70px 40px;
     box-sizing: border-box;
     background-image: url("../assets/images/about_bg.webp");
     background-position: center;
     background-size: cover;
+}
+#about #wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 #about div.aboutImageContainer {
     width: 48%;
@@ -232,7 +302,7 @@ header div.menu ul.bottom li a {
 /* **********************  booking ********************************* */
 
 #services {
-    padding: 80px 40px 40px;
+    padding: 80px 0 40px;
     background: linear-gradient(1deg, #56bce44a, white);
     padding-bottom: 45px;
 }
@@ -381,9 +451,9 @@ header div.menu ul.bottom li a {
 #doctors div.content div.descriptionContainer {
     background-image: url("../assets/images/doctors_bg.webp");
     background-size: cover;
-    width: 50%;
+    width: 55%;
     border-radius: 5px;
-    padding: 70px 30px;
+    padding: 0 30px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -423,7 +493,7 @@ header div.menu ul.bottom li a {
 }
 /* **********************  doctors ********************************* */
 
-#contact {
+#contact #wrapper {
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
@@ -653,18 +723,17 @@ footer ul.lower li a:hover {
 
 @media all and (max-width: 980px) {
     header {
-        width: 80%;
+        width: 100%;
     }
     header h1 {
         width: 100px;
+        margin-left: 10px;
     }
     header div.menu {
         display: none;
     }
     header .ham {
         display: block;
-        font-size: 30px;
-        color: #135caaff;
     }
     #spotlight {
         height: 60vh;
@@ -677,6 +746,9 @@ footer ul.lower li a:hover {
         font-size: 18px;
     }
     #about {
+        background-position: right;
+    }
+    #about #wrapper {
         flex-direction: column;
         background-position: right;
     }
@@ -720,8 +792,8 @@ footer ul.lower li a:hover {
         font-size: 14px;
     }
     #doctors div.content div.descriptionContainer {
-        width: 80%;
-        padding: 40px 15px;
+        width: 100%;
+        padding: 40px 50px;
     }
 }
 /* **********************  980px ********************************* */
@@ -731,6 +803,9 @@ footer ul.lower li a:hover {
         font-size: 14px;
         padding: 10px;
     }
+    #spotlight h2 {
+        font-size: 34px;
+    }
     #booking div.buttonContainer {
         flex-direction: column;
     }
@@ -739,6 +814,15 @@ footer ul.lower li a:hover {
     }
     #services div.serviceContainerItem {
         padding: 65px 40px;
+    }
+    #reviews div.slider h4 {
+        font-size: 20px;
+    }
+    #reviews div.slider p {
+        font-size: 14px;
+    }
+    #reviews div.slider span {
+        font-size: 12px;
     }
     footer .upper {
         flex-direction: column;
@@ -769,6 +853,7 @@ footer ul.lower li a:hover {
     }
     #booking {
         margin: 20px auto;
+        box-shadow: rgb(38, 57, 77) 0px 25px 15px -20px;
     }
     #services div.serviceContainerItem {
         padding: 50px 20px;
@@ -798,7 +883,10 @@ footer ul.lower li a:hover {
     #doctors h3 {
         margin-bottom: 35px;
     }
-    #contact {
+    #doctors div.content div.descriptionContainer {
+        padding: 40px;
+    }
+    #contact #wrapper {
         flex-direction: column;
     }
     #contact div.content {
@@ -806,6 +894,21 @@ footer ul.lower li a:hover {
     }
     #contact div.map {
         width: 100%;
+    }
+    #reviews h3 {
+        font-size: 26px;
+    }
+    #reviews p {
+        font-size: 18px;
+    }
+    #reviews div.slider h4 {
+        font-size: 20px;
+    }
+    #reviews div.slider p {
+        font-size: 14px;
+    }
+    #reviews div.slider span {
+        font-size: 12px;
     }
 }
 /* **********************  640px ********************************* */
@@ -855,10 +958,11 @@ footer ul.lower li a:hover {
     }
     #doctors div.content div.imageContainer {
         margin-bottom: 0;
-        width: 90%;
+        width: 100%;
     }
     #doctors div.content div.descriptionContainer {
-        width: 90%;
+        width: 100%;
+        padding: 40px 15px;
     }
     #doctors h3 {
         font-size: 24px;

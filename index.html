@@ -53,7 +53,7 @@
             <div class="menu">
                 <ul class="top">
                     <li>
-                        <a href="#">
+                        <a href="tel:333456457">
                             <span class="icon-phone"></span>(333) 456-457</a
                         >
                     </li>
@@ -88,17 +88,52 @@
                 </ul>
             </div>
             <span class="icon-menu ham"></span>
+            <div class="sliderMenu">
+                <ul>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>
+                        <a href="#">about</a>
+                    </li>
+                    <li>
+                        <a href="#">services</a>
+                    </li>
+                    <li>
+                        <a href="#">for patients</a>
+                    </li>
+                    <li>
+                        <a href="#">Invisalign®</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+                <div class="iconContainer">
+                    <span class="icon-location round"></span>
+                    <span class="icon-calendar round"></span>
+                    <span class="icon-phone round"></span>
+                </div>
+                <span class="menuOption">
+                    <a href="#">new patient online booking</a></span
+                >
+                <span class="menuOption"
+                    ><a href="#">request an appointment</a></span
+                >
+            </div>
         </header>
-
         <!-- header -->
-        <section id="wrapper">
-            <section id="spotlight">
+
+        <section id="spotlight">
+            <section id="wrapper">
                 <h2 class="heading">Servecing Downriver Since 1995</h2>
                 <a href="#" class="button">REQUEST AN APPOINTMENT</a>
             </section>
-            <!-- Spotlight -->
+        </section>
+        <!-- Spotlight -->
 
-            <section id="about">
+        <section id="about">
+            <section id="wrapper">
                 <div class="aboutImageContainer">
                     <img src="./assets/images/about.jpg" alt="parents" />
                 </div>
@@ -127,9 +162,11 @@
                     <a href="#" class="button">call us today</a>
                 </div>
             </section>
-            <!-- About -->
+        </section>
+        <!-- About -->
 
-            <section id="booking">
+        <section id="booking">
+            <section id="wrapper">
                 <h3>Welcoming New Patients</h3>
                 <p>
                     We are thrilled to offer exclusive discounts for new
@@ -142,9 +179,11 @@
                     <a href="#" class="button">new patient online booking</a>
                 </div>
             </section>
-            <!-- Booking -->
+        </section>
+        <!-- Booking -->
 
-            <section id="services">
+        <section id="services">
+            <section id="wrapper">
                 <h3>our specialities</h3>
                 <div class="serviceContainer">
                     <div class="serviceContainerItem">
@@ -201,18 +240,20 @@
                     <a href="#" class="button">view our other services</a>
                 </div>
             </section>
-            <!-- Services -->
+        </section>
+        <!-- Services -->
 
-            <section id="invisalign">
-                <div class="container">
-                    <h3>Invisalign®</h3>
-                    <h4>in a Relaxed Atmosphere</h4>
-                    <a href="#" class="button">read more</a>
-                </div>
-            </section>
-            <!-- Invisalign -->
+        <section id="invisalign">
+            <div class="container">
+                <h3>Invisalign®</h3>
+                <h4>in a Relaxed Atmosphere</h4>
+                <a href="#" class="button">read more</a>
+            </div>
+        </section>
+        <!-- Invisalign -->
 
-            <section id="doctors">
+        <section id="doctors">
+            <section id="wrapper">
                 <h3>meet the doctor</h3>
                 <div class="content">
                     <div class="imageContainer">
@@ -237,9 +278,11 @@
                     </div>
                 </div>
             </section>
-            <!-- Doctors -->
+        </section>
+        <!-- Doctors -->
 
-            <section id="contact">
+        <section id="contact">
+            <section id="wrapper">
                 <div class="content">
                     <h4>Visit Our Office</h4>
                     <h5>Lincoln Park, MI</h5>
@@ -280,9 +323,8 @@
                     ></iframe>
                 </div>
             </section>
-            <!-- Contact -->
         </section>
-        <!-- Wrapper -->
+        <!-- Contact -->
 
         <section id="reviews">
             <section id="wrapper">
@@ -468,6 +510,11 @@
                         loop: true,
                     },
                 },
+            });
+            $(document).ready(function () {
+                $(".ham").click(function () {
+                    $(".sliderMenu").slideToggle("slow");
+                });
             });
         </script>
     </body>
